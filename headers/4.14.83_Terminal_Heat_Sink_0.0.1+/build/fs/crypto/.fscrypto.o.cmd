@@ -1,0 +1,1 @@
+cmd_fs/crypto/fscrypto.o :=  rm -f fs/crypto/fscrypto.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD fs/crypto/fscrypto.o fs/crypto/crypto.o fs/crypto/fname.o fs/crypto/hooks.o fs/crypto/keyinfo.o fs/crypto/policy.o fs/crypto/fscrypt_ice.o fs/crypto/bio.o 

@@ -1,0 +1,1 @@
+cmd_fs/f2fs/built-in.o :=   rm -f fs/f2fs/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD fs/f2fs/built-in.o fs/f2fs/f2fs.o 

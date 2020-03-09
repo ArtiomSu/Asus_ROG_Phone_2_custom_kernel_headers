@@ -1,0 +1,1 @@
+cmd_lib/mpi/built-in.o :=   rm -f lib/mpi/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD lib/mpi/built-in.o lib/mpi/mpi.o 

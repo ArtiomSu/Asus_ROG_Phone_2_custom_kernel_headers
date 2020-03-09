@@ -1,0 +1,1 @@
+cmd_lib/zlib_deflate/built-in.o :=   rm -f lib/zlib_deflate/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD lib/zlib_deflate/built-in.o lib/zlib_deflate/zlib_deflate.o 

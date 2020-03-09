@@ -1,0 +1,300 @@
+# 1 "../arch/arm64/boot/dts/qcom/msm8992-bullhead-rev-101.dts"
+# 1 "<built-in>" 1
+# 1 "../arch/arm64/boot/dts/qcom/msm8992-bullhead-rev-101.dts" 2
+# 14 "../arch/arm64/boot/dts/qcom/msm8992-bullhead-rev-101.dts"
+/dts-v1/;
+
+
+# 1 "../arch/arm64/boot/dts/qcom/msm8992.dtsi" 1
+# 13 "../arch/arm64/boot/dts/qcom/msm8992.dtsi"
+# 1 "../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+
+
+
+
+
+
+
+
+# 1 "../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 14 "../arch/arm64/boot/dts/qcom/msm8992.dtsi" 2
+# 1 "../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8994.h" 1
+# 15 "../arch/arm64/boot/dts/qcom/msm8992.dtsi" 2
+
+/ {
+ model = "Qualcomm Technologies, Inc. MSM 8992";
+ compatible = "qcom,msm8992";
+
+ qcom,msm-id = <251 0>, <252 0>;
+ interrupt-parent = <&intc>;
+
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ chosen { };
+
+ cpus {
+  #address-cells = <2>;
+  #size-cells = <0>;
+  cpu-map {
+   cluster0 {
+    core0 {
+     cpu = <&CPU0>;
+    };
+   };
+  };
+
+  CPU0: cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a53", "arm,armv8";
+   reg = <0x0 0x0>;
+   next-level-cache = <&L2_0>;
+   L2_0: l2-cache {
+    compatible = "cache";
+    cache-level = <2>;
+   };
+  };
+ };
+
+ timer {
+  compatible = "arm,armv8-timer";
+  interrupts = <1 2 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 3 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 4 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 1 ((((1 << (4)) - 1) << 8) | 8)>;
+ };
+
+ xo_board: xo_board {
+  compatible = "fixed-clock";
+  #clock-cells = <0>;
+  clock-frequency = <19200000>;
+ };
+
+ sleep_clk: sleep_clk {
+  compatible = "fixed-clock";
+  #clock-cells = <0>;
+  clock-frequency = <32768>;
+ };
+
+ vreg_vph_pwr: vreg-vph-pwr {
+  compatible = "regulator-fixed";
+  status = "okay";
+  regulator-name = "vph-pwr";
+
+  regulator-min-microvolt = <3600000>;
+  regulator-max-microvolt = <3600000>;
+
+  regulator-always-on;
+ };
+
+ sfpb_mutex: hwmutex {
+  compatible = "qcom,sfpb-mutex";
+  syscon = <&sfpb_mutex_regs 0x0 0x100>;
+  #hwlock-cells = <1>;
+ };
+
+ smem {
+  compatible = "qcom,smem";
+  memory-region = <&smem_region>;
+  qcom,rpm-msg-ram = <&rpm_msg_ram>;
+  hwlocks = <&sfpb_mutex 3>;
+ };
+
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0 0 0 0xffffffff>;
+  compatible = "simple-bus";
+
+  intc: interrupt-controller@f9000000 {
+   compatible = "qcom,msm-qgic2";
+   interrupt-controller;
+   #interrupt-cells = <3>;
+   reg = <0xf9000000 0x1000>,
+    <0xf9002000 0x1000>;
+  };
+
+  apcs: syscon@f900d000 {
+   compatible = "syscon";
+   reg = <0xf900d000 0x2000>;
+  };
+
+  timer@f9020000 {
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+   compatible = "arm,armv7-timer-mem";
+   reg = <0xf9020000 0x1000>;
+
+   frame@f9021000 {
+    frame-number = <0>;
+    interrupts = <0 9 4>,
+      <0 8 4>;
+    reg = <0xf9021000 0x1000>,
+     <0xf9022000 0x1000>;
+   };
+
+   frame@f9023000 {
+    frame-number = <1>;
+    interrupts = <0 10 4>;
+    reg = <0xf9023000 0x1000>;
+    status = "disabled";
+   };
+
+   frame@f9024000 {
+    frame-number = <2>;
+    interrupts = <0 11 4>;
+    reg = <0xf9024000 0x1000>;
+    status = "disabled";
+   };
+
+   frame@f9025000 {
+    frame-number = <3>;
+    interrupts = <0 12 4>;
+    reg = <0xf9025000 0x1000>;
+    status = "disabled";
+   };
+
+   frame@f9026000 {
+    frame-number = <4>;
+    interrupts = <0 13 4>;
+    reg = <0xf9026000 0x1000>;
+    status = "disabled";
+   };
+
+   frame@f9027000 {
+    frame-number = <5>;
+    interrupts = <0 14 4>;
+    reg = <0xf9027000 0x1000>;
+    status = "disabled";
+   };
+
+   frame@f9028000 {
+    frame-number = <6>;
+    interrupts = <0 15 4>;
+    reg = <0xf9028000 0x1000>;
+    status = "disabled";
+   };
+  };
+
+  restart@fc4ab000 {
+   compatible = "qcom,pshold";
+   reg = <0xfc4ab000 0x4>;
+  };
+
+  msmgpio: pinctrl@fd510000 {
+   compatible = "qcom,msm8994-pinctrl";
+   reg = <0xfd510000 0x4000>;
+   interrupts = <0 208 4>;
+   gpio-controller;
+   #gpio-cells = <2>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+  };
+
+  blsp1_uart2: serial@f991e000 {
+   compatible = "qcom,msm-uartdm-v1.4", "qcom,msm-uartdm";
+   reg = <0xf991e000 0x1000>;
+   interrupts = <0 108 8>;
+   status = "disabled";
+   clock-names = "core", "iface";
+   clocks = <&clock_gcc 72>,
+    <&clock_gcc 58>;
+  };
+
+  clock_gcc: clock-controller@fc400000 {
+   compatible = "qcom,gcc-msm8994";
+   #clock-cells = <1>;
+   #reset-cells = <1>;
+   #power-domain-cells = <1>;
+   reg = <0xfc400000 0x2000>;
+  };
+
+  rpm_msg_ram: memory@fc428000 {
+   compatible = "qcom,rpm-msg-ram";
+   reg = <0xfc428000 0x4000>;
+  };
+
+  sfpb_mutex_regs: syscon@fd484000 {
+   #address-cells = <1>;
+   #size-cells = <1>;
+   compatible = "syscon";
+   reg = <0xfd484000 0x400>;
+  };
+ };
+
+ memory {
+  device_type = "memory";
+  reg = <0 0 0 0>;
+ };
+
+ reserved-memory {
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+
+  smem_region: smem@6a00000 {
+   reg = <0x0 0x6a00000 0x0 0x200000>;
+   no-map;
+  };
+ };
+
+};
+
+
+
+# 1 "../arch/arm64/boot/dts/qcom/msm8992-pins.dtsi" 1
+# 14 "../arch/arm64/boot/dts/qcom/msm8992-pins.dtsi"
+&msmgpio {
+ blsp1_uart2_default: blsp1_uart2_default {
+  pinmux {
+   function = "blsp_uart2";
+   pins = "gpio4", "gpio5";
+  };
+  pinconf {
+   pins = "gpio4", "gpio5";
+   drive-strength = <16>;
+   bias-disable;
+  };
+ };
+
+ blsp1_uart2_sleep: blsp1_uart2_sleep {
+  pinmux {
+   function = "gpio";
+   pins = "gpio4", "gpio5";
+  };
+  pinconf {
+   pins = "gpio4", "gpio5";
+   drive-strength = <2>;
+   bias-pull-down;
+  };
+ };
+};
+# 238 "../arch/arm64/boot/dts/qcom/msm8992.dtsi" 2
+# 17 "../arch/arm64/boot/dts/qcom/msm8992-bullhead-rev-101.dts" 2
+
+/ {
+ model = "LG Nexus 5X";
+ compatible = "lg,bullhead", "qcom,msm8992";
+
+ qcom,board-id = <0xb64 0>;
+ qcom,pmic-id = <0x10009 0x1000A 0x0 0x0>;
+
+ aliases {
+  serial0 = &blsp1_uart2;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ soc {
+  serial@f991e000 {
+   status = "okay";
+   pinctrl-names = "default", "sleep";
+   pinctrl-0 = <&blsp1_uart2_default>;
+   pinctrl-1 = <&blsp1_uart2_sleep>;
+  };
+ };
+};

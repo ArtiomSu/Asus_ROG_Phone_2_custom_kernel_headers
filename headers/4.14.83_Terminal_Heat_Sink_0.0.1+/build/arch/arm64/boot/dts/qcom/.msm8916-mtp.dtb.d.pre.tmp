@@ -1,0 +1,13 @@
+arch/arm64/boot/dts/qcom/.msm8916-mtp.dtb.dts.tmp: \
+  ../arch/arm64/boot/dts/qcom/msm8916-mtp.dts \
+  ../arch/arm64/boot/dts/qcom/msm8916-mtp.dtsi \
+  ../arch/arm64/boot/dts/qcom/msm8916.dtsi \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8916.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/reset/qcom,gcc-msm8916.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,rpmcc.h \
+  ../arch/arm64/boot/dts/qcom/msm8916-pins.dtsi \
+  ../arch/arm64/boot/dts/qcom/pm8916.dtsi \
+  ../scripts/dtc/include-prefixes/dt-bindings/iio/qcom,spmi-vadc.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/spmi/spmi.h

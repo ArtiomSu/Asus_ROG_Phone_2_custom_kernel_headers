@@ -1,0 +1,1 @@
+cmd_net/bpf/built-in.o :=   rm -f net/bpf/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD net/bpf/built-in.o net/bpf/test_run.o 

@@ -1,0 +1,1 @@
+cmd_fs/fat/vfat.o :=  rm -f fs/fat/vfat.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD fs/fat/vfat.o fs/fat/namei_vfat.o 

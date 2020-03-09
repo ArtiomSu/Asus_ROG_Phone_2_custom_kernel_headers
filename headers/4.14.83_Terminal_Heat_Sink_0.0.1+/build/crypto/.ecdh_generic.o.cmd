@@ -1,0 +1,1 @@
+cmd_crypto/ecdh_generic.o :=  rm -f crypto/ecdh_generic.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD crypto/ecdh_generic.o crypto/ecc.o crypto/ecdh.o crypto/ecdh_helper.o 

@@ -1,0 +1,1 @@
+cmd_sound/pcmcia/built-in.o :=   rm -f sound/pcmcia/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD sound/pcmcia/built-in.o sound/pcmcia/vx/built-in.o sound/pcmcia/pdaudiocf/built-in.o 

@@ -1,0 +1,7 @@
+arch/arm64/boot/dts/qcom/.msm8992-bullhead-rev-101.dtb.dts.tmp: \
+  ../arch/arm64/boot/dts/qcom/msm8992-bullhead-rev-101.dts \
+  ../arch/arm64/boot/dts/qcom/msm8992.dtsi \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8994.h \
+  ../arch/arm64/boot/dts/qcom/msm8992-pins.dtsi

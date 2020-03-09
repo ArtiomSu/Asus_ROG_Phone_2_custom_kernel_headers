@@ -1,0 +1,25 @@
+kernel/drivers/video/backlight/lcd.ko:
+kernel/drivers/soc/qcom/llcc_perfmon.ko:
+kernel/drivers/char/rdbg.ko:
+kernel/drivers/net/wireless/ath/wil6210/wil6210.ko: kernel/drivers/platform/msm/msm_11ad/msm_11ad_proxy.ko
+kernel/drivers/usb/host/ghci/ghci-hcd.ko:
+kernel/drivers/usb/host/ghci/gxhci-hcd.ko:
+kernel/drivers/input/touchscreen/station_focaltech_touch/station_focaltech_touch.ko:
+kernel/drivers/input/touchscreen/station_goodix_gtx8/station_goodix_touch.ko:
+kernel/drivers/media/rc/msm-geni-ir.ko:
+kernel/drivers/media/platform/msm/broadcast/tspp.ko:
+kernel/drivers/media/platform/msm/dvb/adapter/mpq-adapter.ko:
+kernel/drivers/media/platform/msm/dvb/demux/mpq-dmx-hw-plugin.ko: kernel/drivers/media/platform/msm/dvb/adapter/mpq-adapter.ko kernel/drivers/media/platform/msm/broadcast/tspp.ko
+kernel/drivers/mmc/core/mmc_test.ko:
+kernel/drivers/platform/msm/msm_11ad/msm_11ad_proxy.ko:
+kernel/drivers/aura_sync/ml51fb9ae_inbox.ko:
+kernel/drivers/aura_sync/ene_6k582_station.ko:
+kernel/drivers/ec_hid_driver/ec_i2c_updatefw.ko:
+kernel/drivers/ec_hid_driver/ec_i2c_interface.ko:
+kernel/drivers/ec_hid_driver/station_key.ko:
+kernel/drivers/dt_power/ene_8k41_power.ko:
+kernel/drivers/fan/nct7802.ko:
+kernel/drivers/dt_aura/ene_8k41_dt.ko:
+kernel/drivers/ntfs/user/tntfs.ko:
+kernel/drivers/exfat/user/texfat.ko:
+kernel/net/bridge/br_netfilter.ko:

@@ -1,0 +1,9 @@
+arch/arm64/boot/dts/qcom/.msm8996-mtp.dtb.dts.tmp: \
+  ../arch/arm64/boot/dts/qcom/msm8996-mtp.dts \
+  ../arch/arm64/boot/dts/qcom/msm8996-mtp.dtsi \
+  ../arch/arm64/boot/dts/qcom/msm8996.dtsi \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8996.h \
+  ../scripts/dtc/include-prefixes/dt-bindings/clock/qcom,mmcc-msm8996.h \
+  ../arch/arm64/boot/dts/qcom/msm8996-pins.dtsi

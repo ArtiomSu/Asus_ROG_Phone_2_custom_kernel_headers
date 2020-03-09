@@ -1,0 +1,23 @@
+# Aliases extracted from modules themselves.
+alias of:N*T*Cqcom,llcc-perfmon llcc_perfmon
+alias of:N*T*Cqcom,llcc-perfmonC* llcc_perfmon
+alias pci:v00001AE9d00000310sv*sd*bc*sc*i* wil6210
+alias pci:v00001AE9d00000302sv*sd*bc*sc*i* wil6210
+alias pci:v000017CBd00001201sv*sd*bc*sc*i* wil6210
+alias i2c:fts_ts_station station_focaltech_touch
+alias of:N*T*Cgoodix_station,gt9886 station_goodix_touch
+alias of:N*T*Cgoodix_station,gt9886C* station_goodix_touch
+alias i2c:station_goodix_i2c station_goodix_touch
+alias platform:goodix_ts_station station_goodix_touch
+alias asus:nuvoton-ml51 ml51fb9ae_inbox
+alias asus:ene_6k582 ene_6k582_station
+alias asus:ec fw ec_i2c_updatefw
+alias asus:ec i2c ec_i2c_interface
+alias platform:gpio-keys station_key
+alias of:N*T*Cstation-keys station_key
+alias of:N*T*Cstation-keysC* station_key
+alias asus:ene-8k41 ene_8k41_power
+alias i2c:nct7802 nct7802
+alias asus:ene-8k41 ene_8k41_dt
+alias fs-tntfs tntfs
+alias fs-texfat texfat

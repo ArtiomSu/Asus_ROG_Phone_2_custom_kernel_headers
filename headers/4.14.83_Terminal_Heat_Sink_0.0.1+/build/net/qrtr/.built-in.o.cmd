@@ -1,0 +1,1 @@
+cmd_net/qrtr/built-in.o :=   rm -f net/qrtr/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD net/qrtr/built-in.o net/qrtr/qrtr.o net/qrtr/qrtr-smd.o net/qrtr/qrtr-mhi.o net/qrtr/qrtr-fifo.o 

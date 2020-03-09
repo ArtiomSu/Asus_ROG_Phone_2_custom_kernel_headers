@@ -1,0 +1,1 @@
+cmd_security/pfe/built-in.o :=   rm -f security/pfe/built-in.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD security/pfe/built-in.o security/pfe/pfk.o security/pfe/pfk_kc.o security/pfe/pfk_ice.o security/pfe/pfk_ext4.o security/pfe/pfk_f2fs.o 

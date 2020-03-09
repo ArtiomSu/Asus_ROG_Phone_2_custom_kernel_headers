@@ -1,0 +1,1 @@
+cmd_net/bridge/br_netfilter.ko := /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld -EL -r  -maarch64linux -T ../scripts/module-common.lds -T ../arch/arm64/kernel/module.lds --build-id  -o net/bridge/br_netfilter.ko net/bridge/br_netfilter.o net/bridge/br_netfilter.mod.o ;  true

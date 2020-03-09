@@ -1,0 +1,1 @@
+cmd_net/netfilter/nf_conntrack_h323.o :=  rm -f net/netfilter/nf_conntrack_h323.o; /home/android/android-kernel/useful/android-ndk/android-ndk-r21/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rcSTPD net/netfilter/nf_conntrack_h323.o net/netfilter/nf_conntrack_h323_main.o net/netfilter/nf_conntrack_h323_asn1.o 

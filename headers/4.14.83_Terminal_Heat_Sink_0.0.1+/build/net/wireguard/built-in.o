@@ -1,0 +1,44 @@
+!<thin>
+//                                              394       `
+main.o/
+noise.o/
+device.o/
+peer.o/
+timers.o/
+queueing.o/
+send.o/
+receive.o/
+socket.o/
+peerlookup.o/
+allowedips.o/
+ratelimiter.o/
+cookie.o/
+netlink.o/
+crypto/zinc/chacha20/chacha20.o/
+crypto/zinc/chacha20/chacha20-arm64.o/
+crypto/zinc/poly1305/poly1305.o/
+crypto/zinc/poly1305/poly1305-arm64.o/
+crypto/zinc/chacha20poly1305.o/
+crypto/zinc/blake2s/blake2s.o/
+crypto/zinc/curve25519/curve25519.o/
+/0              0           0     0     644     283024    `
+/8              0           0     0     644     388280    `
+/17             0           0     0     644     373096    `
+/27             0           0     0     644     317712    `
+/35             0           0     0     644     321568    `
+/45             0           0     0     644     19392     `
+/57             0           0     0     644     378888    `
+/65             0           0     0     644     381616    `
+/76             0           0     0     644     346416    `
+/86             0           0     0     644     316256    `
+/100            0           0     0     644     360168    `
+/114            0           0     0     644     309520    `
+/129            0           0     0     644     317520    `
+/139            0           0     0     644     374000    `
+/150            0           0     0     644     404200    `
+/183            0           0     0     644     5200      `
+/222            0           0     0     644     314624    `
+/255            0           0     0     644     5200      `
+/294            0           0     0     644     399520    `
+/326            0           0     0     644     317552    `
+/357            0           0     0     644     446184    `
